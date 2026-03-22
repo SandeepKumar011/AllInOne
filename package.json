@@ -1,0 +1,27 @@
+{
+  "name": "playtypeconfidence",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js test || true",
+    "posttest": "ts-node helper/generate-report.ts",
+    "particularfeature": "npx cucumber-js features/login.feature",
+    "onlySmoke": "npx cucumber-js features/login.feature --tags '@Smoke'",
+    "onlyRegression": "npx cucumber-js features/login.feature --tags '@Regression'",
+    "smoke": "npx cucumber-js --tags @Smoke --parallel 2",
+    "both": "npx cucumber-js --tags '@Regression and @Smoke' --parallel 2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.2.0",
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.3",
+    "multiple-cucumber-html-reporter": "^3.9.3",
+    "playwright": "^1.55.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}

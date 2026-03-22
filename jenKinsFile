@@ -1,0 +1,31 @@
+pipeline{
+    agent any
+    stages{
+        stage('Build'){
+            steps{
+                echo 'Building testing...'
+                 bat 'npm install'
+            }
+        }
+
+         stage('install Playwright'){
+            steps{
+                echo 'Installing Playwright...'
+                bat 'npx playwright install'
+            }
+        }
+
+        stage('Test'){
+            steps{
+                echo 'Testing... is in progresss'
+                 bat 'npx cucumber-js features/login.feature'
+            }
+        }
+        stage('Deploy'){
+            steps{
+                echo 'Deploying... also in progress'
+            }
+        }
+    }
+
+}

@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "cucumberopen.cucumber-official",
+        "alexkrechik.cucumberautocomplete",
+        "ms-playwright.playwright"
+    ]
+}
