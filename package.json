@@ -9,7 +9,8 @@
     "onlySmoke": "npx cucumber-js features/login.feature --tags '@Smoke'",
     "onlyRegression": "npx cucumber-js features/login.feature --tags '@Regression'",
     "smoke": "npx cucumber-js --tags @Smoke --parallel 2",
-    "both": "npx cucumber-js --tags '@Regression and @Smoke' --parallel 2"
+    "both": "npx cucumber-js --tags '@Regression and @Smoke' --parallel 2",
+    "fireFoxBrowser": "set BROWSER=firefox && npx cucumber-js features/login.feature"
   },
   "keywords": [],
   "author": "",
