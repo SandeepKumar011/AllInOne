@@ -5,7 +5,7 @@
   "scripts": {
     "test": "cucumber-js test || true",
     "posttest": "ts-node helper/generate-report.ts",
-    "particularfeature": "npx cucumber-js features/login.feature --dry-run",
+    "particularfeature": "npx cucumber-js features/login.feature",
     "onlySmoke": "npx cucumber-js --tags '@Smoke'",
     "onlySmoke2": "cucumber-js --tags \"@Smoke\"",
     "onlyRegression": "npx cucumber-js --tags '@Regression'",
