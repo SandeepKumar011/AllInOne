@@ -6,7 +6,7 @@
       "require": ["tests/stepFiles/**/*.ts","hooks/**/*.ts"],
       "publishQuiet": true,
       "dryRun":false,
-     
+      "paths": ["features/**/*.feature"],
       "format": [
         "progress-bar",
         "json:test-results/cucumber-report.json"
