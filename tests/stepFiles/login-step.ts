@@ -7,6 +7,7 @@ let loginPage: LoginPage;
 
 Given("user is on login page", async function () {
   await pageFixture.page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+  await pageFixture.page.waitForLoadState("networkidle");
   loginPage = new LoginPage(pageFixture.page);
 });
 
@@ -19,6 +20,7 @@ When("user click on the login button", async function () {
 });
 
 Then("verify user logged successfully", async function () {
-  await loginPage.validateDashboard();
+    await pageFixture.page.waitForLoadState("networkidle");
+    await loginPage.validateDashboard();
 
 });

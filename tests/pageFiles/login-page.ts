@@ -22,6 +22,7 @@ export default class LoginPage {
    }
 
    async login(username: string, password: string){
+     await this.usrnameTextField.waitFor({ state: 'visible', timeout: 60000 });
      await this.usrnameTextField.fill(username);
      await this.passwordTextField.fill(password);
      await this.submitButton.click();
@@ -29,6 +30,7 @@ export default class LoginPage {
 
    async validateDashboard(){
      await this.page.waitForLoadState("networkidle");
+     await this.dashBoadField.waitFor({ state: 'visible', timeout: 60000 });
      await expect(await this.dashBoadField).toBeVisible();
    }
    

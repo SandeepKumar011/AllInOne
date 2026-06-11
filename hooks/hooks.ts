@@ -3,6 +3,8 @@ import { BeforeAll, AfterAll, Before, After, ITestCaseHookParameter, Status, Wor
 import { setDefaultTimeout } from "@cucumber/cucumber";
 import { chromium, Browser, Page, BrowserContext, firefox} from "@playwright/test";
 import { pageFixture } from "../hooks/pageFixture";
+import fs from "fs";
+const reporter = require("multiple-cucumber-html-reporter");
 
 let browser: Browser;
 let context: BrowserContext;
@@ -10,22 +12,9 @@ setDefaultTimeout(90 * 1000);
 
 BeforeAll(async function () {
   //for single browser instance
-  //browser = await chromium.launch({ headless: false,
-  //args: ["--start-maximized"]});
-
-    //for single browser instance with multiple browser options
-  const browserType = process.env.BROWSER || "chromium";
-
-  if (browserType === "firefox") {
-    browser = await firefox.launch({
-      headless: false
-    });
-  } else {
-    browser = await chromium.launch({
-      headless: false,
-      args: ["--start-maximized"]
-    });
-  }
+  browser = await chromium.launch({ headless: false,
+  args: ["--start-maximized"]});
+  
 });
 
 Before(async function () {
@@ -48,6 +37,8 @@ After(async function (this: World, scenario: ITestCaseHookParameter) {
 });
 
 AfterAll(async function () {
+  
   await browser.close();
+
 });
 

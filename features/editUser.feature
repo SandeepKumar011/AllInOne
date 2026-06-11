@@ -1,6 +1,6 @@
-Feature: add user the Feature
+Feature: edit user the Feature
 
-@Smoke
+@Regression
 Scenario: test the add user Feature
      And user enter the user details 
      And user click on the save button
