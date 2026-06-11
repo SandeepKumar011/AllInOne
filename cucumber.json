@@ -1,13 +1,17 @@
-
-   {
-  "default": {
-    "require": ["tests/stepFiles/**/*.ts", "hooks/**/*.ts"],
-    "requireModule": ["ts-node/register"],
-    "paths": ["features/**/*.feature"],
-    "format": [
-      "json:test-results/cucumber-report.json"
-    ]
+{
+    "default": {
+        "formatOptions": {
+            "snippetInterface": "async-await"
+          },
+      "require": ["tests/stepFiles/**/*.ts","hooks/**/*.ts"],
+      "publishQuiet": true,
+      "dryRun":false,
+     
+      "format": [
+        "progress-bar",
+        "json:test-results/cucumber-report.json"
+      ],
+      "requireModule":[ "ts-node/register" ],
+      "parallel": 2
+    }
   }
-
-  }
-  

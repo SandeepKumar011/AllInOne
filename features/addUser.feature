@@ -1,6 +1,6 @@
 Feature: add user the Feature
 
-@Smoke
+
 Scenario: test the add user Feature
      And user enter the user details 
      And user click on the save button

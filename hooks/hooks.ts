@@ -13,7 +13,7 @@ BeforeAll(async function () {
   //args: ["--start-maximized"]});
 
     //for single browser instance with multiple browser options
-  const browserType = process.env.BROWSER || "firefox";
+  const browserType = process.env.BROWSER || "chromium";
 
   if (browserType === "firefox") {
     browser = await firefox.launch({
