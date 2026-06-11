@@ -8,10 +8,10 @@
     "particularfeature": "npx cucumber-js features/login.feature",
     "onlySmoke": "npx cucumber-js --tags '@Smoke'",
     "onlySmoke2": "cucumber-js --tags \"@Smoke\"",
-    "onlyRegression": "npx cucumber-js --tags '@Regression'",
-    "smokeParallel": "npx cucumber-js --tags @Smoke --parallel 2",
+    "onlyRegression": "cucumber-js --tags \"@Regression\"",
+    "smokeParallel": "npx cucumber-js --tags \"@Smoke\" --parallel 2",
     "parallelRun": "npx cucumber-js --parallel 2",
-    "both": "npx cucumber-js --tags '@Regression and @Smoke' --parallel 2",
+    "both": "cucumber-js --tags \"@Regression and @Smoke\" --parallel 2",
     "generateReport": "npx ts-node ./helper/generate-report.ts"
   },
   "keywords": [],
